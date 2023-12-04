@@ -1,0 +1,12 @@
+# Ignore this folders
+.ipynb_checkpoints
+.vscode
+
+__pycache__
+
+Cifar100_Data
+cifar-100-python
+cifar-100-python.tar
+
+*.pt
+*.gz
