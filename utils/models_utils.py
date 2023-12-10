@@ -374,7 +374,7 @@ def save_model(model: any, path: str = "./") -> None:
     torch.save(model.state_dict(), path)
 
 
-def load_model(model_Class: any, path: str = "./") -> None:
+def load_model(model_Class: any, path: str = "./") -> any:
     """
     Parameters
     ----------
@@ -383,15 +383,16 @@ def load_model(model_Class: any, path: str = "./") -> None:
 
     Returns
     ----------
-    None
+    any, returns model object
 
     Notes
     ----------
     Function for loading model in a given path to its object.
     """
-
+    
     model_Class.load_state_dict(torch.load(path))
     model_Class.eval()
+    return model_Class
 
 
 # Helper for getting model weights #
